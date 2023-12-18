@@ -1,0 +1,19 @@
+{
+  "name": "ニコニコ動画 あとで見る 視聴済みチェッカー",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "ニコニコ動画の【あとで見る】ページで視聴済みの動画をすべて選択する拡張機能です。ページに追加される【視聴済みチェッカーEX】をクリックすると使えます。",
+  "icons" : {
+    "128" : "icon.png"
+  },
+  "background": {
+    "service_worker": "service_worker.js"
+  },
+  "permissions": [
+    "webNavigation",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://www.nicovideo.jp/my/watchlater*"
+  ]
+}
