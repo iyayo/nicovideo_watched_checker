@@ -7,7 +7,10 @@ chrome.webNavigation.onHistoryStateUpdated.addListener(details => {
     chrome.scripting.executeScript({
       target: { tabId: details.tabId },
       func: () => {
+          if (document.getElementById("watched_checker_button")) return;
+
           const button = document.createElement("button");
+          button.id = "watched_checker_button";
           button.className = "ContinuousPlayButton WatchLaterMenu-continuous";
           button.innerText = "視聴済みチェッカーEX";
           button.addEventListener("click", select_watched);
